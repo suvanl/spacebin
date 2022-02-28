@@ -1,0 +1,15 @@
+<script src="https://kit.fontawesome.com/c39b74a1d2.js" crossorigin="anonymous" defer></script>
+
+<div class="buttons-wrapper">
+    <a href="/" class="logo">🌌 Spacebin</a>
+    <div class="buttons">
+        <a href="/new" class="btn"><i class="fas fa-plus"></i><br />New</a>
+        <% if (locals.canSave) { %>
+            <button class="btn" type="submit"><i class="fas fa-save"></i></i><br />Save</button>
+        <% } %>
+
+        <% if (locals.id !== null) { %>
+            <a href="/<%= locals.id %>/duplicate" class="btn"><i class="fas fa-copy"></i><br />Duplicate</a> 
+        <% } %>
+    </div>
+</div>
