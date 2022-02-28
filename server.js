@@ -9,7 +9,6 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
-// ! EXPOSED CONNECTION STRING
 mongoose.connect(process.env.MONGO_STRING)
     .then(console.log("[INFO]: Database connection established"));
 
